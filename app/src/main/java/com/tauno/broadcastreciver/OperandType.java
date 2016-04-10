@@ -3,29 +3,25 @@ package com.tauno.broadcastreciver;
 /**
  * Created by Tauno on 3.04.2016.
  */
-public class OperandType {
-    private int _id;
+public class OperandType implements IEntity {
+    private long _id;
     private String _operand;
-    private int _lifeTimeCounter;
+    private long _lifeTimeCounter;
 
-   /* public OperandType(){}
+    public OperandType(){
 
-    public OperandType(int id, String operand, int Counter){
-        this._id = id;
-        this._operand = operand;
-        this._lifeTimeCounter = Counter;
+   }
+
+    public OperandType(String operand, long Counter){
+        setOperand(operand);
+        setCounter(Counter);
     }
 
-    public OperandType(String operand, int counter){
-        this._operand = operand;
-        this._lifeTimeCounter = counter;
-    }
-*/
-    public int getID(){
+    public long getId(){
         return this._id;
     }
 
-    public void setID(int id){
+    public void setId(long id){
         this._id = id;
     }
 
@@ -33,17 +29,14 @@ public class OperandType {
         return this._operand;
     }
 
-    public void setOperand(String operand){
-        this._operand = operand;
-    }
+    public void setOperand(String operand){ this._operand = operand; }
 
-    public int getCounter(){
+    public long getCounter(){
         return this._lifeTimeCounter;
     }
 
-    public void setCounter(int counter){
+    public void setCounter(long counter){
         this._lifeTimeCounter = counter;
     }
-
 
 }

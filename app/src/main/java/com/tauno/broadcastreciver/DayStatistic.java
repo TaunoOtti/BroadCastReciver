@@ -5,42 +5,52 @@ import java.util.Date;
 /**
  * Created by Tauno on 3.04.2016.
  */
-public class DayStatistic {
+public class DayStatistic implements IEntity {
 
-    private int _id;
-    private Date _dayStamp;
-    private int _dayCounter;
-    private int _operandId;
+    private long _id;
+    private String _dayStamp;
+    private long _dayCounter;
+    private long _operandId;
 
-    public int getId(){
+    public DayStatistic(){
+
+    }
+
+    public DayStatistic(String date, long daycount, long operandId){
+        setDayStamp(date);
+        setDayCounter(daycount);
+        setOperandId(operandId);
+    }
+
+    public long getId(){
         return this._id;
     }
 
-    public void setId(int id){
+    public void setId(long id){
         this._id = id;
     }
 
-    public Date getDayStamp(){
+    public String getDayStamp(){
         return this._dayStamp;
     }
 
-    public void setDayStamp(Date dayStamp){
+    public void setDayStamp(String dayStamp){
         this._dayStamp = dayStamp;
     }
 
-    public int getOperandId(){
+    public long getOperandId(){
         return this._operandId;
     }
 
-    public void setOperandId(int operandId){
+    public void setOperandId(long operandId){
         this._operandId = operandId;
     }
 
-    public int getDayCounter(){
+    public long getDayCounter(){
         return this._dayCounter;
     }
 
-    public void setDayCounter(int dayCounter){
+    public void setDayCounter(long dayCounter){
         this._dayCounter = dayCounter;
     }
 }
